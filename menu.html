@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Pizzeria Da Nino - Treviso</title>
+    <meta name="description" content="Scopri il menu della Pizzeria Da Nino: pizze rosse, bianche, speciali, antipasti, dolci e bevande. Prezzi e ingredienti.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Da Nino</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="prenota.html">Prenota</a></li>
+                <li><a href="tel:+390422123456" class="nav-phone">📞 0422 123456</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-label">Scopri i Nostri Sapori</span>
+            <h1>Il Nostro Menu</h1>
+            <p>Ingredienti freschi, impasto tradizionale e tanta passione</p>
+
+            <!-- QR Code for Mobile Menu -->
+            <div class="qr-menu" id="qrMenu">
+                <button class="qr-toggle" id="qrToggle">
+                    <span>📱</span> Menu QR Code
+                </button>
+                <div class="qr-popup" id="qrPopup">
+                    <div class="qr-content">
+                        <h4>Scansiona per il Menu Mobile</h4>
+                        <div class="qr-code" id="qrCode"></div>
+                        <p>Inquadra il QR code con la fotocamera del tuo smartphone</p>
+                        <button class="qr-close" id="qrClose">Chiudi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <div class="menu-nav-wrapper">
+        <nav class="menu-nav">
+            <div class="container">
+                <ul class="menu-tabs">
+                    <li><a href="#pizze-rosse" class="active">Pizze Rosse</a></li>
+                    <li><a href="#pizze-bianche">Pizze Bianche</a></li>
+                    <li><a href="#pizze-speciali">Speciali</a></li>
+                    <li><a href="#antipasti">Antipasti</a></li>
+                    <li><a href="#dolci">Dolci</a></li>
+                    <li><a href="#bevande">Bevande</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Menu Content -->
+    <main class="menu-content">
+        <div class="container">
+
+            <!-- Pizze Rosse -->
+            <section class="menu-section" id="pizze-rosse">
+                <div class="menu-section-header">
+                    <h2>🍅 Pizze Rosse</h2>
+                    <p>Le classiche con pomodoro San Marzano DOP</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Marinara</h3>
+                            <span class="price">€5,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro San Marzano, aglio, origano, olio EVO</p>
+                        <span class="tag tag-vegan">Vegana</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Margherita</h3>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro San Marzano, mozzarella fior di latte, basilico fresco</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                    </div>
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3>Margherita DOP</h3>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro San Marzano DOP, mozzarella di bufala campana DOP, basilico fresco, olio EVO</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                        <span class="tag tag-premium">Premium</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Napoli</h3>
+                            <span class="price">€7,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, acciughe del Cantabrico, capperi, origano</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Diavola</h3>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, salame piccante calabrese, peperoncino fresco</p>
+                        <span class="tag tag-spicy">🌶️ Piccante</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Capricciosa</h3>
+                            <span class="price">€9,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, prosciutto cotto, funghi champignon, carciofi, olive</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Quattro Stagioni</h3>
+                            <span class="price">€9,50</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive (divisa in quattro sezioni)</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tonno e Cipolla</h3>
+                            <span class="price">€8,50</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, tonno sott'olio, cipolla rossa di Tropea</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pizze Bianche -->
+            <section class="menu-section" id="pizze-bianche">
+                <div class="menu-section-header">
+                    <h2>🧀 Pizze Bianche</h2>
+                    <p>Senza pomodoro, cremose e saporite</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Quattro Formaggi</h3>
+                            <span class="price">€9,00</span>
+                        </div>
+                        <p class="ingredients">Mozzarella, gorgonzola DOP, parmigiano reggiano, fontina valdostana</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Patate e Rosmarino</h3>
+                            <span class="price">€7,50</span>
+                        </div>
+                        <p class="ingredients">Crema di patate, mozzarella, patate a fettine, rosmarino fresco, olio EVO</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Porcini</h3>
+                            <span class="price">€11,00</span>
+                        </div>
+                        <p class="ingredients">Crema di funghi, mozzarella, funghi porcini, prezzemolo, aglio</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                    </div>
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3>Burrata e Crudo</h3>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p class="ingredients">Base bianca, burrata pugliese, prosciutto crudo San Daniele, rucola, pomodorini</p>
+                        <span class="tag tag-premium">Premium</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pizze Speciali -->
+            <section class="menu-section" id="pizze-speciali">
+                <div class="menu-section-header">
+                    <h2>⭐ Le Speciali del Nonno</h2>
+                    <p>Creazioni esclusive della casa</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3>La Nino</h3>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p class="ingredients">Crema di zucca, salsiccia veneta, provola affumicata, noci caramellate</p>
+                        <span class="tag tag-special">🏆 Signature</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Trevigiana</h3>
+                            <span class="price">€11,00</span>
+                        </div>
+                        <p class="ingredients">Radicchio rosso di Treviso IGP, gorgonzola, speck Alto Adige, noci</p>
+                        <span class="tag tag-special">Locale</span>
+                    </div>
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3>Tartufata</h3>
+                            <span class="price">€14,00</span>
+                        </div>
+                        <p class="ingredients">Crema di tartufo nero, mozzarella di bufala, pancetta croccante, rucola, scaglie di parmigiano</p>
+                        <span class="tag tag-premium">Premium</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Ortolana</h3>
+                            <span class="price">€10,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, mozzarella, zucchine grigliate, melanzane, peperoni, pomodorini</p>
+                        <span class="tag tag-vegetarian">Vegetariana</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Salmone e Avocado</h3>
+                            <span class="price">€13,00</span>
+                        </div>
+                        <p class="ingredients">Base bianca, salmone affumicato norvegese, avocado, philadelphia, erba cipollina</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Nduja e Stracciatella</h3>
+                            <span class="price">€11,50</span>
+                        </div>
+                        <p class="ingredients">Pomodoro, stracciatella pugliese, nduja calabrese, basilico fresco</p>
+                        <span class="tag tag-spicy">🌶️ Piccante</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Antipasti -->
+            <section class="menu-section" id="antipasti">
+                <div class="menu-section-header">
+                    <h2>🥗 Antipasti</h2>
+                    <p>Per iniziare con gusto</p>
+                </div>
+                <div class="menu-grid menu-grid-compact">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Bruschette Miste (4 pz)</h3>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p class="ingredients">Pomodoro fresco, nduja, crema di carciofi, lardo di Colonnata</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tagliere Salumi</h3>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p class="ingredients">Prosciutto crudo, coppa, salame nostrano, soppressa veneta, giardiniera</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tagliere Formaggi</h3>
+                            <span class="price">€10,00</span>
+                        </div>
+                        <p class="ingredients">Selezione di formaggi locali con miele e confettura di fichi</p>
+                        <span class="tag tag-vegetarian">Vegetariano</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Fritto Misto</h3>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p class="ingredients">Olive ascolane, mozzarelline, zucchine, fiori di zucca (stagionale)</p>
+                        <span class="tag tag-vegetarian">Vegetariano</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Caprese</h3>
+                            <span class="price">€8,00</span>
+                        </div>
+                        <p class="ingredients">Mozzarella di bufala, pomodoro cuore di bue, basilico, olio EVO</p>
+                        <span class="tag tag-vegetarian">Vegetariano</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Focaccia al Rosmarino</h3>
+                            <span class="price">€4,00</span>
+                        </div>
+                        <p class="ingredients">Focaccia calda con rosmarino e sale grosso</p>
+                        <span class="tag tag-vegan">Vegana</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dolci -->
+            <section class="menu-section" id="dolci">
+                <div class="menu-section-header">
+                    <h2>🍰 Dolci</h2>
+                    <p>Il finale perfetto</p>
+                </div>
+                <div class="menu-grid menu-grid-compact">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Tiramisù della Casa</h3>
+                            <span class="price">€5,00</span>
+                        </div>
+                        <p class="ingredients">Ricetta tradizionale con mascarpone, savoiardi e caffè</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Panna Cotta</h3>
+                            <span class="price">€4,50</span>
+                        </div>
+                        <p class="ingredients">Con coulis di frutti di bosco</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Nutella Pizza</h3>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p class="ingredients">Pizza dolce con Nutella, fragole e zucchero a velo</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Sorbetto al Limone</h3>
+                            <span class="price">€4,00</span>
+                        </div>
+                        <p class="ingredients">Limoni di Sorrento, servito nella scorza</p>
+                        <span class="tag tag-vegan">Vegano</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bevande -->
+            <section class="menu-section" id="bevande">
+                <div class="menu-section-header">
+                    <h2>🍷 Bevande</h2>
+                    <p>Per accompagnare la tua pizza</p>
+                </div>
+                <div class="menu-grid menu-grid-compact">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Acqua (1L)</h3>
+                            <span class="price">€2,00</span>
+                        </div>
+                        <p class="ingredients">Naturale o frizzante</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Coca-Cola / Fanta / Sprite</h3>
+                            <span class="price">€3,00</span>
+                        </div>
+                        <p class="ingredients">33cl in vetro</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Birra Moretti (33cl)</h3>
+                            <span class="price">€4,00</span>
+                        </div>
+                        <p class="ingredients">Lager italiana alla spina</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Birra Artigianale (50cl)</h3>
+                            <span class="price">€6,00</span>
+                        </div>
+                        <p class="ingredients">Selezione rotante di birrifici locali</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Prosecco DOC (calice)</h3>
+                            <span class="price">€4,00</span>
+                        </div>
+                        <p class="ingredients">Valdobbiadene extra dry</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Prosecco DOC (bottiglia)</h3>
+                            <span class="price">€15,00</span>
+                        </div>
+                        <p class="ingredients">Valdobbiadene extra dry 75cl</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Vino Rosso della Casa</h3>
+                            <span class="price">€12,00</span>
+                        </div>
+                        <p class="ingredients">Merlot Veneto IGT - Bottiglia 75cl</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Caffè Espresso</h3>
+                            <span class="price">€1,50</span>
+                        </div>
+                        <p class="ingredients">Miscela arabica 100%</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Amaro / Limoncello</h3>
+                            <span class="price">€3,50</span>
+                        </div>
+                        <p class="ingredients">Digestivi della casa</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Notes -->
+            <div class="menu-notes">
+                <p><strong>Allergeni:</strong> Per informazioni su allergeni e intolleranze, consultare il personale di sala.</p>
+                <p><strong>Coperto:</strong> €1,50 a persona</p>
+                <p>🌱 = Vegetariano | 🌿 = Vegano | 🌶️ = Piccante | ⭐ = Premium</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="cta-section cta-compact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Hai scelto?</h2>
+                <p>Prenota il tuo tavolo e vieni a gustare le nostre pizze!</p>
+                <div class="cta-buttons">
+                    <a href="prenota.html" class="btn btn-primary">Prenota Ora</a>
+                    <a href="tel:+390422123456" class="btn btn-outline">
+                        <span class="btn-icon">📞</span>
+                        0422 123456
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🍕</span>
+                        <span class="logo-text">Da Nino</span>
+                    </a>
+                    <p>La vera pizza napoletana nel cuore di Treviso, dal 1988.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="prenota.html">Prenota</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contatti</h4>
+                    <address>
+                        Via Calmaggiore 23<br>
+                        31100 Treviso (TV)
+                    </address>
+                    <a href="tel:+390422123456">0422 123456</a>
+                </div>
+                <div class="footer-hours">
+                    <h4>Orari</h4>
+                    <p>Mar - Dom: 18:00 - 23:00</p>
+                    <p>Lunedì: Chiuso</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizzeria Da Nino. Tutti i diritti riservati.</p>
+                <p>P.IVA: 01234567890</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
