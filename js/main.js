@@ -577,21 +577,13 @@ function initQRCode() {
     const qrToggle = document.getElementById('qrToggle');
     const qrPopup = document.getElementById('qrPopup');
     const qrClose = document.getElementById('qrClose');
-    const qrCodeContainer = document.getElementById('qrCode');
 
-    if (!qrToggle || !qrPopup || !qrCodeContainer) return;
+    if (!qrToggle || !qrPopup) return;
 
-    // Generate QR code on first open
-    let qrGenerated = false;
-
+    // Toggle popup (QR code image is already in HTML)
     qrToggle.addEventListener('click', function() {
         qrPopup.classList.add('active');
         document.body.style.overflow = 'hidden';
-
-        if (!qrGenerated) {
-            generateQRCode(qrCodeContainer);
-            qrGenerated = true;
-        }
     });
 
     qrClose.addEventListener('click', function() {
