@@ -1,41 +1,48 @@
 /* =====================================================
-   PIZZERIA DA NINO - MAIN STYLESHEET
-   Design: Modern Italian with warm traditional elements
+   DA ROCCO PIZZERIA E PUB - MAIN STYLESHEET
+   Design: Modern Italian Pizzeria & Pub with warm traditional elements
    Colors: Brick red, cream, olive green, charcoal
+   Location: Olmi
    ===================================================== */
 
 /* =====================================================
    CSS VARIABLES
    ===================================================== */
 :root {
-    /* Primary Colors */
-    --color-primary: #C41E3A;        /* Brick red */
-    --color-primary-dark: #9E1830;   /* Darker red */
-    --color-primary-light: #E85A6F;  /* Light red */
+    /* Primary Colors - Forest Green (elegante) */
+    --color-primary: #2D5A3D;        /* Forest green */
+    --color-primary-dark: #1E3D2A;   /* Dark forest green */
+    --color-primary-light: #4A8B5C;  /* Light green */
 
     /* Secondary Colors */
-    --color-secondary: #2C5530;      /* Olive green */
-    --color-secondary-light: #4A7C4E;
+    --color-secondary: #1A1A1A;      /* Near black */
+    --color-secondary-light: #333333;
+
+    /* Nature Accent Colors */
+    --color-leaf: #4A8B5C;           /* Soft leaf green */
+    --color-moss: #6B8E23;           /* Olive drab */
+    --color-sage: #9DC183;           /* Sage green */
+    --color-mint: #B8D4B8;           /* Pale green */
 
     /* Neutral Colors */
-    --color-cream: #FDF6E3;          /* Warm cream background */
-    --color-cream-dark: #F5ECD7;
+    --color-cream: #F5F7F4;          /* Light sage background */
+    --color-cream-dark: #E8EDE6;
     --color-white: #FFFFFF;
-    --color-charcoal: #2D2D2D;
-    --color-gray-dark: #4A4A4A;
-    --color-gray: #6B6B6B;
-    --color-gray-light: #9B9B9B;
-    --color-border: #E5DDD0;
+    --color-charcoal: #1A1A1A;       /* Near black */
+    --color-gray-dark: #2D2D2D;
+    --color-gray: #5A5A5A;
+    --color-gray-light: #8A8A8A;
+    --color-border: #D4DDD0;
 
     /* Accent Colors */
-    --color-gold: #D4A84B;
+    --color-gold: #8FBC8F;           /* Dark sea green accent */
     --color-success: #4CAF50;
     --color-warning: #FF9800;
     --color-error: #F44336;
 
-    /* Typography */
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography - Nature inspired */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Spacing */
     --space-xs: 0.25rem;
@@ -213,6 +220,7 @@ h4 {
 
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
+    color: var(--color-white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -224,8 +232,9 @@ h4 {
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-cream);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
 }
 
 .btn-outline {
@@ -680,6 +689,108 @@ h4 {
 }
 
 /* =====================================================
+   LOCALE SECTION - PARALLAX
+   ===================================================== */
+.locale-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.locale-parallax {
+    position: absolute;
+    inset: -20%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+.locale-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 26, 0.85) 0%,
+        rgba(45, 90, 61, 0.75) 100%
+    );
+    z-index: -1;
+}
+
+.locale-content {
+    text-align: left;
+    color: var(--color-white);
+    max-width: 600px;
+    padding: var(--space-3xl) var(--space-lg);
+    margin-right: auto;
+}
+
+.locale-content .section-label {
+    color: var(--color-gold);
+}
+
+.locale-content h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-lg);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.locale-content p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+}
+
+.locale-features {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.locale-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.locale-feature-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.locale-feature span:last-child {
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 768px) {
+    .locale-parallax {
+        background-attachment: scroll;
+    }
+
+    .locale-section {
+        min-height: 60vh;
+    }
+
+    .locale-features {
+        gap: var(--space-xl);
+    }
+
+    .locale-feature-icon {
+        font-size: 2rem;
+    }
+}
+
+/* =====================================================
    INFO SECTION
    ===================================================== */
 .info-section {
@@ -816,7 +927,7 @@ h4 {
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(196,30,58,0.9) 0%, rgba(158,24,48,0.95) 100%);
+    background: linear-gradient(135deg, rgba(45,90,61,0.9) 0%, rgba(30,61,42,0.95) 100%);
 }
 
 .cta-content {
@@ -1512,14 +1623,17 @@ h4 {
 }
 
 .call-button {
-    background-color: var(--color-white);
+    background: var(--color-white);
     color: var(--color-primary);
+    border: 2px solid var(--color-white);
 }
 
 .call-button:hover {
-    background-color: var(--color-cream);
+    background: var(--color-cream);
     color: var(--color-primary-dark);
+    border-color: var(--color-cream);
     transform: none;
+    box-shadow: none;
 }
 
 .booking-info .hours-list {
@@ -2314,7 +2428,7 @@ h4 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(196,30,58,0.03), transparent);
+    background: linear-gradient(90deg, transparent, rgba(45,90,61,0.03), transparent);
     transition: left 0.6s var(--ease-out-expo);
 }
 
@@ -2346,7 +2460,7 @@ h4 {
 .form-group select:focus,
 .form-group textarea:focus {
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(196,30,58,0.15);
+    box-shadow: 0 4px 20px rgba(45,90,61,0.15);
 }
 
 /* Label float animation */
@@ -2469,4 +2583,385 @@ h4 {
 
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease forwards;
+}
+
+/* =====================================================
+   NATURE INSPIRED ANIMATIONS & DECORATIONS
+   ===================================================== */
+
+/* Leaf floating animation */
+@keyframes leafFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+/* Gentle sway like branches */
+@keyframes gentleSway {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+/* Growing effect for elements */
+@keyframes growIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Nature pulse - like a heartbeat of nature */
+@keyframes naturePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(45, 90, 61, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(45, 90, 61, 0);
+    }
+}
+
+/* Green glow effect */
+.green-glow {
+    animation: naturePulse 3s ease-in-out infinite;
+}
+
+/* Leaf decoration pseudo-elements */
+.leaf-decoration::before {
+    content: '🌿';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: leafFloat 4s ease-in-out infinite;
+}
+
+/* Organic border with gradient */
+.organic-border {
+    position: relative;
+}
+
+.organic-border::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg,
+        var(--color-primary),
+        var(--color-leaf),
+        var(--color-moss),
+        var(--color-sage),
+        var(--color-primary));
+    background-size: 300% 300%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Enhanced buttons with nature feel */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(45, 90, 61, 0.25);
+}
+
+/* Nature-inspired section dividers */
+.nature-divider {
+    height: 4px;
+    background: linear-gradient(90deg,
+        transparent,
+        var(--color-sage),
+        var(--color-primary),
+        var(--color-leaf),
+        var(--color-sage),
+        transparent);
+    border: none;
+    margin: var(--space-3xl) 0;
+    border-radius: var(--radius-full);
+}
+
+/* Floating leaves background decoration */
+.leaves-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.leaves-bg::before,
+.leaves-bg::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--color-mint) 0%, transparent 70%);
+    opacity: 0.1;
+    border-radius: 50%;
+    animation: leafFloat 8s ease-in-out infinite;
+}
+
+.leaves-bg::before {
+    top: 10%;
+    right: 5%;
+    animation-delay: -2s;
+}
+
+.leaves-bg::after {
+    bottom: 15%;
+    left: 3%;
+    animation-delay: -4s;
+}
+
+/* Green text highlight */
+.text-green {
+    color: var(--color-primary);
+}
+
+.text-leaf {
+    color: var(--color-leaf);
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-leaf), var(--color-moss));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Cards with organic hover */
+.card-organic {
+    transition: all 0.4s var(--ease-out-expo);
+    border: 2px solid transparent;
+}
+
+.card-organic:hover {
+    border-color: var(--color-sage);
+    box-shadow: 0 15px 40px rgba(45, 90, 61, 0.15);
+    transform: translateY(-8px) rotate(0.5deg);
+}
+
+/* Growing underline for links */
+.link-grow {
+    position: relative;
+    display: inline-block;
+}
+
+.link-grow::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-leaf));
+    transition: all 0.4s var(--ease-out-expo);
+    transform: translateX(-50%);
+}
+
+.link-grow:hover::after {
+    width: 100%;
+}
+
+/* Vine-like border animation */
+@keyframes vineGrow {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Hero enhancement with nature elements */
+.hero h1 span {
+    color: var(--color-gold);
+    text-shadow: 0 0 30px rgba(143, 188, 143, 0.3);
+}
+
+/* Section labels with leaf icon */
+.section-label {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.section-label::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+    animation: gentleSway 3s ease-in-out infinite;
+}
+
+/* Enhanced specialty cards */
+.specialty-card {
+    border: 2px solid transparent;
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.specialty-card:hover {
+    border-color: var(--color-sage);
+}
+
+.specialty-card.featured {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(45, 90, 61, 0.1);
+}
+
+/* Price with nature styling */
+.specialty-content .price,
+.menu-item .price {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-moss));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Info cards with organic feel */
+.info-card {
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Footer with nature gradient */
+.footer {
+    background: linear-gradient(180deg, var(--color-charcoal) 0%, #0a1a0d 100%);
+}
+
+/* Social links with green hover */
+.social-links a:hover,
+.social-link:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-leaf));
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Input focus with nature glow */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1), 0 4px 20px rgba(45, 90, 61, 0.15);
+}
+
+/* Menu tabs with organic style */
+.menu-tabs a.active,
+.menu-tabs a:hover {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+/* Scroll progress with gradient */
+.scroll-progress {
+    background: linear-gradient(90deg,
+        var(--color-primary-dark),
+        var(--color-primary),
+        var(--color-leaf),
+        var(--color-moss));
+}
+
+/* CTA overlay with nature gradient */
+.cta-overlay {
+    background: linear-gradient(135deg,
+        rgba(27, 94, 32, 0.92) 0%,
+        rgba(34, 139, 34, 0.88) 50%,
+        rgba(13, 13, 13, 0.95) 100%);
+}
+
+/* Locale overlay enhancement */
+.locale-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(13, 13, 13, 0.85) 0%,
+        rgba(34, 139, 34, 0.6) 50%,
+        rgba(27, 94, 32, 0.8) 100%
+    );
+}
+
+/* Hero badge with nature style */
+.hero-badge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    box-shadow: 0 4px 15px rgba(45, 90, 61, 0.4);
+}
+
+/* About badge enhancement */
+.about-badge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    box-shadow: 0 10px 30px rgba(45, 90, 61, 0.3);
+}
+
+/* Custom cursor with green theme */
+.custom-cursor {
+    border-color: var(--color-primary);
+}
+
+.custom-cursor.cursor-hover {
+    background-color: rgba(45, 90, 61, 0.15);
+    border-color: var(--color-primary-light);
+}
+
+/* Typography enhancements */
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-weight: 500;
+}
+
+/* Logo text styling */
+.logo-text {
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }

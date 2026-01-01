@@ -1,7 +1,8 @@
 /**
- * Pizzeria Da Nino - Main JavaScript
+ * Da Rocco Pizzeria e Pub - Main JavaScript
  * Handles navigation, forms, QR code, animations and interactions
  * Inspired by Awwwards modern animation techniques
+ * Location: Olmi
  */
 
 document.addEventListener('DOMContentLoaded', function() {
